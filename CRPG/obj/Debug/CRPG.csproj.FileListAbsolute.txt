@@ -1,0 +1,7 @@
+C:\VGD\PMQ2\CRPG\CRPG\bin\Debug\CRPG.exe.config
+C:\VGD\PMQ2\CRPG\CRPG\bin\Debug\CRPG.exe
+C:\VGD\PMQ2\CRPG\CRPG\bin\Debug\CRPG.pdb
+C:\VGD\PMQ2\CRPG\CRPG\obj\Debug\CRPG.csprojAssemblyReference.cache
+C:\VGD\PMQ2\CRPG\CRPG\obj\Debug\CRPG.csproj.CoreCompileInputs.cache
+C:\VGD\PMQ2\CRPG\CRPG\obj\Debug\CRPG.exe
+C:\VGD\PMQ2\CRPG\CRPG\obj\Debug\CRPG.pdb

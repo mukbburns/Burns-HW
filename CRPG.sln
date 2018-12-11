@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRPG", "CRPG\CRPG.csproj", "{4F756194-F726-4212-8339-CC3DE6E2C7CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F756194-F726-4212-8339-CC3DE6E2C7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F756194-F726-4212-8339-CC3DE6E2C7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F756194-F726-4212-8339-CC3DE6E2C7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F756194-F726-4212-8339-CC3DE6E2C7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {241B1BB8-F236-449B-839B-C6959AB65D98}
+	EndGlobalSection
+EndGlobal
