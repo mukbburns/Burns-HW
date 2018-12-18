@@ -8,17 +8,12 @@ namespace CRPG
 {
     class Program
     {
-
-        private static Player _player = new Player();
-
-
-
+       private static Player _player = new Player("Benji Not Genji",10,10,20,0,1);
+       
         static void Main(string[] args)
         {
             GameEngine.Initialize();
-            _player.Name = "Benji Not Genji";
-            _player.CurrentLocation = World.LocationByID(World.Location_ID_HOME);
-
+            _player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
             while(true)
             {
                 Console.Write(">");
@@ -28,7 +23,7 @@ namespace CRPG
                     continue;
                 }
                 string cleanedInput = userInput.ToLower();
-
+                
                 if (cleanedInput == "exit")
                 {
                     break;
