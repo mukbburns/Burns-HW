@@ -26,7 +26,8 @@ namespace CRPG
         {
             ID = iD;
             Name = name;
-            Description = description;// constructor error?
+            Description = description;
+            ItemRequiredToEnter = itemRequiredToEnter;
         }
 
         

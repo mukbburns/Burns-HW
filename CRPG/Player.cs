@@ -32,6 +32,31 @@ namespace CRPG
         
         public void MoveTo(Location loc)
         {
+            
+            //check to make sure player has any requied items
+            if (loc.ItemRequiredToEnter !=null)
+            {
+                //check for item
+                bool playerHasRequiredItem = false;
+                foreach(InventoryItem ii in this.Inventory)
+                {
+                    if (ii.Details.ID == loc.ItemRequiredToEnter.ID)
+                    {
+                        playerHasRequiredItem = true;
+                        break;
+                    }
+                }
+                
+                if(!playerHasRequiredItem)
+                {
+                    Console.WriteLine(" You must have a {0} to enter this location",loc.ItemRequiredToEnter.Name);
+                    return;
+                }
+                
+                
+                
+            }
+            
             CurrentLocation = loc;
         }
 
@@ -40,6 +65,7 @@ namespace CRPG
             if(CurrentLocation.LocationToNorth != null)
             {
                 MoveTo(CurrentLocation.LocationToNorth);
+                Program.DisplayCurrentLocation();
             }
             else
             {
@@ -51,6 +77,7 @@ namespace CRPG
             if (CurrentLocation.LocationToSouth != null)
             {
                 MoveTo(CurrentLocation.LocationToSouth);
+                Program.DisplayCurrentLocation();
             }
             else
             {
@@ -62,6 +89,7 @@ namespace CRPG
             if (CurrentLocation.LocationToEast != null)
             {
                 MoveTo(CurrentLocation.LocationToEast);
+                Program.DisplayCurrentLocation();
             }
             else
             {
@@ -73,6 +101,7 @@ namespace CRPG
             if (CurrentLocation.LocationToWest != null)
             {
                 MoveTo(CurrentLocation.LocationToWest);
+                Program.DisplayCurrentLocation();
             }
             else
             {

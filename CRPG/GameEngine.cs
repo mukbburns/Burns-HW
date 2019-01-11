@@ -8,7 +8,7 @@ namespace CRPG
 {
     public static class GameEngine
     {
-        public static string Version = "0.0.2";
+        public static string Version = "0.0.3";
 
 
         public static void Initialize()
@@ -16,11 +16,15 @@ namespace CRPG
             Console.WriteLine("Initializing Game Engine Version {0}", Version);
             Console.WriteLine("Welcome to {0}", World.WorldName);
             Console.WriteLine();
-            //World.ListLocations();
-            //world,ListItems();
-            //world.ListMonsters();
-            //world.ListQuests();
+            
 
+        }
+        public static void DebugInfo()
+        {
+            World.ListLocations();
+            World.ListItems();
+            World.ListMonsters();
+            World.ListQuests();
         }
 
 
