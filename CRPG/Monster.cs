@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRPG
 {
-    public class Monster: LivingCreature
+    public class Monster : LivingCreature
     {
         public int ID;
         public string Name;
@@ -14,6 +14,8 @@ namespace CRPG
         public int RewardExperiencePoints;
         public int RewardGold;
         public List<LootItem> LootTable;
+        public int currentHitPoints; 
+        public int maximumHitPoints;
         
         
         public Monster(int iD, string name, 

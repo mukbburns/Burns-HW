@@ -8,13 +8,13 @@ namespace CRPG{
     public class LootItem{
          public Item Details;
          public int DropPercentage;
-         public bool IsDeafaultItem;
+         public bool IsDefaultItem;
          
          public LootItem(Item details, int dropPercentage,bool isdefaultitem)
          {
              Details = details;
              DropPercentage = dropPercentage;
-             IsDeafaultItem = isdefaultitem;
+             IsDefaultItem = isdefaultitem;
          }
     }
 }

@@ -89,10 +89,66 @@ namespace CRPG
                 Console.WriteLine("\tXP: \t\t{0}", _player.ExperiencePoints);
                 Console.WriteLine("\tLevel: \t\t{0}",_player.Level);
                 Console.WriteLine("\tGold: \t\t{0}",_player.Gold);
-                                
-                
-                
             }
+            else if (input == "quests" || input == "q")
+            {
+                
+                if(_player.Quests.Count == 0) 
+                {
+                    Console.WriteLine("You do not have any quests.");
+                }else
+                {
+                    foreach (PlayerQuest playerQuest in _player.Quests)
+                    {
+                        Console.WriteLine("{0}: {1}", playerQuest.Details.Name,playerQuest.IsCompleted ? "Completed" : "Incomplete");
+                    }
+                }
+            }
+            else if (input.Contains("attack") || input == "a")
+                {
+                    if(_player.CurrentLocation.MonsterLivingHere == null)
+                    {
+                        Console.WriteLine("There is nothing here to attack");
+                    }else
+                    {
+                        if(_player.CurrentWeapon == null){
+                            Console.WriteLine("You are not equipped with a weapon");
+                        }else 
+                        {
+                            _player.UseWeapon(_player.CurrentWeapon);
+                        }
+                    }
+                }else if (input.StartsWith("equip "))
+                {
+                    _player.UpdateWeapons();
+                    string inputWeaponName = input.Substring(6).Trim();
+                    if (string.IsNullOrEmpty(inputWeaponName))
+                    {
+                        Console.WriteLine("You must enter the name of the weapon to equip.");
+                    } else 
+                    {
+                        Weapon weaponToEquip = _player.Weapons.SingleOrDefault( x => x.Name.ToLower() == inputWeaponName
+                        || x.NamePlural.ToLower() == inputWeaponName);
+                        
+                        if(weaponToEquip == null)
+                        {
+                            Console.WriteLine("You do not have the weapon {0}",inputWeaponName);
+                        } else 
+                        {
+                            _player.CurrentWeapon = weaponToEquip;
+                            Console.WriteLine("You equip your {0}",_player.CurrentWeapon.Name);
+                        }
+                        
+                    }
+                } else if (input=="weapons")
+                {
+                    _player.UpdateWeapons();
+                    Console.WriteLine("list of Weapons:");
+                    foreach (Weapon w in _player.Weapons)
+                    {
+                        Console.WriteLine("\t{0}",w.Name);
+                    }
+                }
             else
             {
                 Console.WriteLine("I don't understand, Sorry!");

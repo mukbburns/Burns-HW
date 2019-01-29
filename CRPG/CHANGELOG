@@ -4,6 +4,18 @@ preposed vhanges for 0.0.3
 +stats for player
 +inventory
 +random number gen
--where am i
--location requirement
++where am i
++location requirement
 +shortcut NAV
+changes 4 version 0.0.4 fin on 1/18
+
++ heal each move
+ + add quests
++ monster detection
+
+0.0.5 changes fin on 24
++ weapon equipping
++ attack Engine
++ last clean up abbrivate cammands
+- finish help system
+CRPG+ finished on ---date---
